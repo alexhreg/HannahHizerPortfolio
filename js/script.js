@@ -22,27 +22,11 @@ if (document.body.style.width >= '700px') {
 const emailAddress = "hannah.hizer@gmail.com"; 
 
 // Get the button and status message elements
-const copyBtn = document.getElementById("copy-email-btn");
-const statusMsg = document.getElementById("copy-status");
+// const copyBtn = document.getElementById("copy-email-btn");
+// const statusMsg = document.getElementById("copy-status");
 
-copyBtn.addEventListener("click", async () => {
-  try {
-    // Write the email to the clipboard
-    await navigator.clipboard.writeText(emailAddress);
-    
-    // Show the "Copied!" message
-    statusMsg.style.display = "inline";
-    
-    // Hide the message again after 2 seconds
-    setTimeout(() => {
-      statusMsg.style.display = "none";
-    }, 2000);
-    
-  } catch (err) {
-    // Handle errors (e.g., if the user denies clipboard permission)
-    console.error("Failed to copy text: ", err);
-    alert("Failed to copy email to clipboard.");
-  }
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(emailAddress);
 });
 
 
