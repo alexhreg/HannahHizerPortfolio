@@ -339,7 +339,7 @@ main {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin: 0 1em;
+  margin-top: 25px;
   /* align-items: center; */
 }
 .document-section {
@@ -363,6 +363,7 @@ main {
   gap: 20px;
   overflow-x: auto;
   padding: 2px;
+  margin: 0 1em;
 }
 .tab-btn {
   border: none;
@@ -377,7 +378,7 @@ main {
   /* height: 70vh;  */
   min-height: 600px; /* Ensures it never gets too squished */
   border: none;
-  border-radius: 8px; /* Optional: gives the inner PDF window slightly rounded corners */
+  border-radius: 2px; /* Optional: gives the inner PDF window slightly rounded corners */
 }
 
 
@@ -385,7 +386,7 @@ main {
    if you want the PDF to stretch all the way to the edges of the border */
 .doc-content {
   background-color: #fff;
-  padding: 16px; /* Reduced from 32px to give the PDF more room */
+  padding: 10px; /* Reduced from 32px to give the PDF more room */
   border-radius: 12px;
   /* border: 1px solid #e0e0e0; */
 }
