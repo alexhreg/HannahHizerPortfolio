@@ -18,6 +18,11 @@ body {
   padding-top: 75px;
   overflow-x: hidden;
 }
+@media (max-width: 950px) {
+  body {
+    padding-top: 100px;
+  }
+}
 
 h1 {
   font-size: 2.5em;
@@ -225,11 +230,25 @@ header.open .bottom-header-wrapper {
 .staggered-border.black {
   margin-top: -25px;
 }
-@media (max-width: 800px) {
-  .staggered-border {
-    width: unset;
+@media (min-width: 800px) {
+  .staggered-border.big {
+    display: block;
+  }
+  .staggered-border.small {
+    display: none;
   }
 }
+@media (max-width: 800px) {
+  .staggered-border.big {
+    display: none;
+  }
+  .staggered-border.small {
+    display: block;
+  }
+}
+
+
+
 
 
 /* Main Section - Home */
@@ -248,7 +267,7 @@ main {
   align-items: center;
   max-width: 1140px;
   margin: 0 1em;
-  height: 600px;
+  min-height: 600px;
 }
 
 .elevator-pitch {
@@ -319,10 +338,13 @@ main {
   /* height: 1000px; */
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  margin: 0 1em;
   /* align-items: center; */
 }
 .document-section {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -330,11 +352,25 @@ main {
   max-width: 1140px;
   min-width: 700px;
 }
+@media (max-width: 700px) {
+  .document-section {
+    min-width: unset;
+  }
+}
 
 .tab-bar {
   display: flex;
   gap: 20px;
+  overflow-x: auto;
+  padding: 2px;
 }
+.tab-btn {
+  border: none;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+
 /* Add this to your existing CSS */
 .pdf-viewer {
   width: 100%;
@@ -344,10 +380,6 @@ main {
   border-radius: 8px; /* Optional: gives the inner PDF window slightly rounded corners */
 }
 
-.tab-btn {
-  border: none;
-  background-color: transparent;
-}
 
 /* Optional: You can remove the default padding on .doc-content 
    if you want the PDF to stretch all the way to the edges of the border */
