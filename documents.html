@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
     <title>Hannah Hizer</title>
     <link rel="stylesheet" href="/css/reset-styles.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -55,18 +56,20 @@
                     <div class="tab-bar">
                         <button class="tab-btn active" onclick="switchDoc(event, 'doc-resume')">Resume</button>
                         <button class="tab-btn" onclick="switchDoc(event, 'doc-cover-letter')">Cover Letter</button>
-                        <button class="tab-btn" onclick="switchDoc(event, 'doc-references')">References</button>
+                        <button class="tab-btn" onclick="switchDoc(event, 'doc-references')">Letters Of Recommendation</button>
                     </div>
 
                     <div id="doc-resume" class="doc-content" style="display: block;">
-                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationCL.pdf" title="Resume"></iframe>
+                        <iframe class="pdf-viewer" src="/assets/documents/Resume.pdf" title="Resume"></iframe>
                     </div>
 
                     <div id="doc-cover-letter" class="doc-content" style="display: none;">
-                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationKD.pdf" title="Cover Letter"></iframe>
+                        <iframe class="pdf-viewer" src="/assets/documents/IntroductionLetterHannahHizer.pdf" title="Cover Letter"></iframe>
                     </div>
 
                     <div id="doc-references" class="doc-content" style="display: none;">
+                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationCL.pdf" title="References"></iframe>
+                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationKD.pdf" title="References"></iframe>
                         <iframe class="pdf-viewer" src="/assets/documents/HannahLetterOfRecommendationTT.pdf" title="References"></iframe>
                     </div>
                 </div>
