@@ -1,47 +1,370 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Variables */
+:root {
+  --almost-black: #191A1E;
+  --almost-white: #F2F2F2;
+  --light-green: #BED2BE;
+}
 
 
+/* General Styles */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 25px;
-  border-bottom: 2px #000000 solid;
+html {
+  background-color: var(--almost-white);
+}
+body {
+  padding-top: 75px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.75em;
+  }
 }
 h1 {
-  font-family: 'Paytone One', sans-serif;
-  color: black;
-  font-size: 2.5em;
+  font-family: "Paytone One", sans-serif;
+  color: var(--almost-black);
+}
+h2 {
+  font-size: 1em;
+  font-family: 'Lato';
+  font-weight: 900;
+  padding: 7px 18px;
+  margin: 0 0 20px 0;
+  border-radius: 20px;
+  background-color: var(--almost-white);
+  width: fit-content;
+  box-shadow: 0 0 0 2px var(--almost-black);
+}
+h3, h4, p, a:not(h1 a, h2 a), button {
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  color: var(--almost-black);
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-.nav-list {
+button {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+}
+
+
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  background-color: #F2F2F290;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px #000000 solid;
+  transition: all .3s;
+
+  position: fixed;
+  top: 0;
+}
+header.open {
+  height: 350px;
+}
+
+/* Top Header */
+.top-header-wrapper {
+  height: 65px;
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Navigation Full */
+.navigation.full ul {
+  display: flex;
+  gap: 10px;
+}
+.navigation.full ul li {
+  height: 100%;
 }
 ul li {
   list-style: none;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.contact {
-  border-radius: 20px;
-  background-color: pink;
-}
-ul li a {
+ul li a, button {
   padding: 5px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  leading-trim: both;
-  text-edge: cap;
-  /* line-height: 1; */
+  border-radius: 20px;
+  transition: .2s;
 }
+ul li a:hover, button:hover {
+  background: var(--light-green);
+  box-shadow: 0 0 0 2px var(--almost-black);
+  cursor: pointer;
+}
+.active {
+  box-shadow: 0 0 0 2px var(--almost-black);
+}
+.call-to-action {
+  border-radius: 20px;
+  background-color: pink;
+  box-shadow: 0 0 0 2px var(--almost-black);
+  border: none;
+}
+
+
+
+/* Bottom Header Wrapper */
+.bottom-header-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0%;
+  transition: all .3s;
+  overflow: hidden;
+}
+header.open .bottom-header-wrapper {
+  opacity: 100%;
+}
+/* Navigation Compact */
+.navigation.compact {
+  /* height: 100%; */
+}
+.navigation.compact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.navigation.compact ul li a {
+  font-size: 1.25em;
+
+}
+
+/* Navigation Toggle */
+
+#nav-toggle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55px;
+  width: 55px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#nav-toggle {
+  transition: .3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#nav-toggle.open {
+  transition: .3s ease-out;
+  transform: translateY(-45px);
+}
+.nav-open, .nav-close {
+  height: 35px;
+  width: 35px;
+}
+
+
+/* Navigation Responsiveness */
+
+@media (max-width: 815px) {
+  .navigation.full {
+    display: none;
+  }
+  .navigation.compact {
+    display: flex;
+  }
+  #nav-toggle-wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: 815px) {
+  .navigation.full {
+    display: flex;
+  }
+  .navigation.compact {
+    display: none;
+  }
+  #nav-toggle-wrapper {
+    display: none;
+  }
+}
+
+
+/* Borders */
+.staggered-border {
+  width: 100%;
+}
+.staggered-border.black {
+  margin-top: -25px;
+}
+@media (max-width: 800px) {
+  .staggered-border {
+    width: unset;
+  }
+}
+
+
+/* Main Section - Home */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 1em;
+  height: 600px;
+}
+
+.elevator-pitch {
+  max-width: 55%;
+}
+.portrait {
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px var(--almost-black);
+}
+
+.teaching-philosophy-wrapper {
+  background-color: var(--light-green);
+  width: 100%;
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 0 100px 0;
+}
+.teaching-philosophy {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 1em;
+}
+.teaching-philosophy p {
+  text-indent: 50px;
+}
+
+@media (max-width: 950px) {
+  .main-section {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+  .elevator-pitch {
+    max-width: 100%;
+  }
+}
+
+
+
+/* Documents Page */
+
+.documents-section {
+  width: 100%;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 20px;
+}
+.document-section {
+  max-width: 1140px;
+  min-width: 700px;
+}
+/* Add this to your existing CSS */
+.pdf-viewer {
+  width: 100%;
+  /* height: 70vh;  */
+  min-height: 600px; /* Ensures it never gets too squished */
+  border: none;
+  border-radius: 8px; /* Optional: gives the inner PDF window slightly rounded corners */
+}
+
+/* Optional: You can remove the default padding on .doc-content 
+   if you want the PDF to stretch all the way to the edges of the border */
+.doc-content {
+  background-color: #fff;
+  padding: 16px; /* Reduced from 32px to give the PDF more room */
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: var(--almost-black);
+}
+
+
+
+/* body {
+	background: linear-gradient(-45deg, #F2F2F2, #f5f8f5, #BED2BE, #f5f8f5, #F2F2F2);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */

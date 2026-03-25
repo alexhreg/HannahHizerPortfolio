@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Hizer</title>
+    <link rel="stylesheet" href="/css/reset-styles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+</head>
+<body>
+
+    <header id="header-wrapper">
+        <div class="top-header-wrapper">
+            <h1><a href="/">Hannah Hizer</a></h1>
+    
+            <!-- Full Navigation -->
+            <nav class="navigation full">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a class="active" href="/documents.html">Documents</a></li>
+                    <!-- <li><a class="call-to-action" href="/contact.html">Contact</a></li> -->
+                    <li><button id="copy-email-btn" class="call-to-action"><img src="/assets/icons/copy.svg" alt="Copy">hannah.hizer@gmail.com</button></li>
+                </ul>
+            </nav>
+    
+            <!-- Nav Toggle Button -->
+            <div id="nav-toggle-wrapper">
+                <div id="nav-toggle">
+                    <img class="nav-open" src="/assets/icons/hamburger.svg" alt="Open Navigation">
+                    <img class="nav-close" src="/assets/icons/close.svg" alt="Close Navigation">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header-wrapper">
+            <nav class="navigation compact">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a class="active" href="/documents.html">Documents</a></li>
+                    <!-- <li><a class="call-to-action" href="/contact.html">Contact</a></li> -->
+                    <li><button id="copy-email-btn" class="call-to-action"><img src="/assets/icons/copy.svg" alt="Copy">hannah.hizer@gmail.com</button></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+
+        <section class="documents">
+
+
+                <div class="document-section">
+                    <div class="tab-bar">
+                        <button class="tab-btn active" onclick="switchDoc(event, 'doc-resume')">Resume</button>
+                        <button class="tab-btn" onclick="switchDoc(event, 'doc-cover-letter')">Cover Letter</button>
+                        <button class="tab-btn" onclick="switchDoc(event, 'doc-references')">References</button>
+                    </div>
+
+                    <div id="doc-resume" class="doc-content" style="display: block;">
+                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationCL.pdf" title="Resume"></iframe>
+                    </div>
+
+                    <div id="doc-cover-letter" class="doc-content" style="display: none;">
+                        <iframe class="pdf-viewer" src="/assets/documents/HannahHizerLetterOfRecommendationKD.pdf" title="Cover Letter"></iframe>
+                    </div>
+
+                    <div id="doc-references" class="doc-content" style="display: none;">
+                        <iframe class="pdf-viewer" src="/assets/documents/HannahLetterOfRecommendationTT.pdf" title="References"></iframe>
+                    </div>
+                </div>
+
+        </section>
+        
+    </main>
+    
+</body>
+</html>
