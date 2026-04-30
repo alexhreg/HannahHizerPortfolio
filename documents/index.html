@@ -9,21 +9,24 @@
     <meta http-equiv="Expires" content="0">
     <title>Hannah Hizer</title>
     <link rel="stylesheet" href="../css/reset-styles.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=2.0">
     <script defer src="../js/script.js"></script>
 </head>
 <body>
 
     <header id="header-wrapper">
         <div class="top-header-wrapper">
-            <h1><a href="/">Hannah Hizer</a></h1>
+            <div class="header-logo">
+                <img src="../assets/icons/flower.svg" alt="Flower">
+                <h1><a href="../">Hannah Hizer</a></h1>
+            </div>
     
             <!-- Full Navigation -->
             <nav class="navigation full">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a class="active" href="../documents">Documents</a></li>
-                    <li><button id="copy-email-btn" class="call-to-action"><img src="../assets/icons/copy.svg" alt="Copy">hannah.hizer@gmail.com</button></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a class="active" href="#/documents">Documents</a></li>
+                    <li><a href="../artifacts">Artifacts</a></li>
                 </ul>
             </nav>
     
@@ -38,19 +41,19 @@
         <div class="bottom-header-wrapper">
             <nav class="navigation compact">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a class="active" href="../documents">Documents</a></li>
-                    <li><button id="copy-email-btn" class="call-to-action"><img src="../assets/icons/copy.svg" alt="Copy">hannah.hizer@gmail.com</button></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a class="active" href="#">Documents</a></li>
+                    <li><a href="../artifacts">Artifacts</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
 
-    <main>
+    <main id="scrolling-content">
 
 
-        <section class="documents">
+        <section class="one-col">
 
 
                 <div class="document-section">
@@ -61,21 +64,92 @@
                     </div>
 
                     <div id="doc-resume" class="doc-content" style="display: block;">
-                        <iframe class="pdf-viewer" src="../assets/documents/Resume.pdf" title="Resume"></iframe>
+                         <div class="info-box">
+                            <h2 class="ib-header">Resume</h2>
+                            <div class="ib-content-wrapper row">
+                                <div class="ib-preview-box">
+                                    <a href="../assets/documents/Resume.pdf">
+                                        <img class="preview" src="../assets/previews/Resume.webp" alt="Domain 1.1">
+                                    </a>
+                                    <div class="preview-options">
+                                        <a href="../assets/documents/Resume.pdf" class="preview-button">View</a>
+                                        <a href="../assets/documents/Resume.pdf" download  class="preview-button">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="doc-cover-letter" class="doc-content" style="display: none;">
-                        <iframe class="pdf-viewer" src="../assets/documents/IntroductionLetterHannahHizer.pdf" title="Cover Letter"></iframe>
+                        <div class="info-box">
+                            <h2 class="ib-header">Cover Letter</h2>
+                            <div class="ib-content-wrapper row">
+                                <div class="ib-preview-box">
+                                    <a href="../assets/documents/IntroductionLetterHannahHizer.pdf">
+                                        <img class="preview" src="../assets/previews/IntroductionLetterHannahHizer.webp" alt="Domain 1.1">
+                                    </a>
+                                    <div class="preview-options">
+                                        <a href="../assets/documents/IntroductionLetterHannahHizer.pdf" class="preview-button">View</a>
+                                        <a href="../assets/documents/IntroductionLetterHannahHizer.pdf" download  class="preview-button">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="doc-references" class="doc-content" style="display: none;">
-                        <iframe class="pdf-viewer" src="../assets/documents/HannahHizerLetterOfRecommendationCL.pdf" title="References"></iframe>
+                        <div class="info-box">
+                            <h2 class="ib-header">Letters of Recommendation</h2>
+                            <div class="ib-content-wrapper column">
+                                <div class="ib-preview-box">
+                                    <a href="../assets/documents/HannahHizerLetterOfRecommendationCL.pdf">
+                                        <img class="preview" src="../assets/previews/HannahHizerLetterOfRecommendationCL.webp" alt="Letter of Recommendation">
+                                    </a>
+                                    <div class="preview-options">
+                                        <a href="../assets/documents/HannahHizerLetterOfRecommendationCL.pdf" class="preview-button">View</a>
+                                        <a href="../assets/documents/HannahHizerLetterOfRecommendationCL.pdf" download  class="preview-button">Download</a>
+                                    </div>
+                                </div>
+                                <div class="ib-preview-box">
+                                    <a href="../assets/documents/HannahHizerLetterOfRecommendationKD.pdf">
+                                        <img class="preview" src="../assets/previews/HannahHizerLetterOfRecommendationKD.webp" alt="Letter of Recommendation">
+                                    </a>
+                                    <div class="preview-options">
+                                        <a href="../assets/documents/HannahHizerLetterOfRecommendationKD.pdf" class="preview-button">View</a>
+                                        <a href="../assets/documents/HannahHizerLetterOfRecommendationKD.pdf" download  class="preview-button">Download</a>
+                                    </div>
+                                </div>
+                                <div class="ib-preview-box">
+                                    <a href="../assets/documents/HannahLetterOfRecommendationTT.pdf">
+                                        <img class="preview" src="../assets/previews/HannahLetterOfRecommendationTT.webp" alt="Letter of Recommendation">
+                                    </a>
+                                    <div class="preview-options">
+                                        <a href="../assets/documents/HannahLetterOfRecommendationTT.pdf" class="preview-button">View</a>
+                                        <a href="../assets/documents/HannahLetterOfRecommendationTT.pdf" download  class="preview-button">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <iframe class="pdf-viewer" src="../assets/documents/HannahHizerLetterOfRecommendationCL.pdf" title="References"></iframe>
                         <iframe class="pdf-viewer" src="../assets/documents/HannahHizerLetterOfRecommendationKD.pdf" title="References"></iframe>
-                        <iframe class="pdf-viewer" src="../assets/documents/HannahLetterOfRecommendationTT.pdf" title="References"></iframe>
+                        <iframe class="pdf-viewer" src="../assets/documents/HannahLetterOfRecommendationTT.pdf" title="References"></iframe> -->
                     </div>
                 </div>
 
         </section>
+
+        <footer>
+            <div class="footer-content">
+                <img src="../assets/icons/flower.svg" alt="">
+                <nav class="navigation full">
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a class="active" href="#">Documents</a></li>
+                        <li><a href="../artifacts">Artifacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
         
     </main>
     

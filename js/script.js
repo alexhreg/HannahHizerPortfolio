@@ -22,7 +22,7 @@ if (document.body.style.width >= '700px') {
 const emailAddress = "hannah.hizer@gmail.com"; 
 
 // Get the button and status message elements
-// const copyBtn = document.getElementById("copy-email-btn");
+const copyBtn = document.getElementById("copy-email-btn");
 // const statusMsg = document.getElementById("copy-status");
 
 copyBtn.addEventListener("click", () => {
